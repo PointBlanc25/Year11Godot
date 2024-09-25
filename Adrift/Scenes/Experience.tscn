@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ikpcwyglmjpr"]
+
+[ext_resource type="Texture2D" uid="uid://b82in352gfhno" path="res://Scenes/oryx_16bit_fantasy_items_89.png" id="1_nfsnk"]
+[ext_resource type="Script" path="res://Scenes/Experience.gd" id="1_s1np8"]
+[ext_resource type="AudioStream" uid="uid://c4lollys8de23" path="res://Sound Effects/pickupCoin.wav" id="3_h1ghk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7k7ih"]
+radius = 6.0
+
+[node name="Experience" type="Area2D" groups=["Pickup"]]
+script = ExtResource("1_s1np8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7k7ih")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.96046e-08, 5.96046e-08)
+scale = Vector2(0.875, 0.875)
+texture = ExtResource("1_nfsnk")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_h1ghk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

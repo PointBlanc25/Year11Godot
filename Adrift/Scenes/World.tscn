@@ -1,0 +1,384 @@
+[gd_scene load_steps=12 format=3 uid="uid://qy38u3lprnvy"]
+
+[ext_resource type="PackedScene" uid="uid://d3cofw1l35i8y" path="res://Scenes/Islands/Island1.tscn" id="1_6tfwd"]
+[ext_resource type="PackedScene" uid="uid://bsmer07xj4hlk" path="res://Scenes/Islands/Island2.tscn" id="2_8n4ak"]
+[ext_resource type="PackedScene" uid="uid://cj2fl2g2r53xg" path="res://Scenes/player.tscn" id="3_qa1ro"]
+[ext_resource type="PackedScene" uid="uid://dcby2n1y5764a" path="res://Scenes/raft.tscn" id="4_nliat"]
+[ext_resource type="Script" path="res://Scenes/Spawn Point Log.gd" id="7_lp775"]
+[ext_resource type="Script" path="res://Scenes/Spawn Point Shark.gd" id="8_422c5"]
+[ext_resource type="PackedScene" uid="uid://bg1d378finuha" path="res://Scenes/ProgressBar.tscn" id="8_w8vwr"]
+[ext_resource type="Script" path="res://Scenes/Spawn Point Crate.gd" id="8_xvxqs"]
+[ext_resource type="Script" path="res://Scenes/escape.gd" id="9_nhq0x"]
+[ext_resource type="PackedScene" uid="uid://da43wk1b30ijf" path="res://Scenes/Arrow.tscn" id="10_xv5k8"]
+[ext_resource type="AudioStream" uid="uid://ccnqgbqywmml4" path="res://Sound Effects/197714__timkahn__atlantic-ocean-waves.wav" id="11_i4u2p"]
+
+[node name="World" type="Node2D"]
+
+[node name="Islands" type="Node" parent="."]
+
+[node name="Island" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1445, 819)
+
+[node name="Island2" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1156, 85)
+
+[node name="Island3" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-222, 387)
+
+[node name="Island4" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-1345, -1055)
+
+[node name="Island5" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-405, -1111)
+
+[node name="Island6" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-17, 1071)
+
+[node name="Island7" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-539, -377)
+
+[node name="Island8" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(374, -606)
+
+[node name="Island9" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-1090, 1374)
+
+[node name="Island10" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(817, 1283)
+
+[node name="Island11" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1305, 372)
+
+[node name="Island12" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-2054, -428)
+
+[node name="Island13" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1215, -618)
+
+[node name="Island14" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(277, -269)
+
+[node name="Island15" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(331, 98)
+
+[node name="Island16" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1239, -488)
+
+[node name="Island17" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(423, 573)
+
+[node name="Island18" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(762, -930)
+
+[node name="Island19" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-136, -734)
+
+[node name="Island20" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-1434, -102)
+
+[node name="Island21" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-33, -36)
+
+[node name="Island22" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-748, 147)
+
+[node name="Island23" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-790, 828)
+
+[node name="Island24" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1516, 843)
+
+[node name="Island25" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1894, 133)
+
+[node name="Island26" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-760, -830)
+
+[node name="Island27" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(849, -360)
+
+[node name="Island28" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(944, 853)
+
+[node name="Island29" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(849, 289)
+
+[node name="Island30" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-1935, 573)
+
+[node name="Island31" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-544, 1240)
+
+[node name="Island32" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1544, 381)
+
+[node name="Island33" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1725, -270)
+
+[node name="Island34" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1878, 109)
+
+[node name="Island35" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(305, 1427)
+
+[node name="Island36" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-266, 765)
+
+[node name="Island37" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-742, 454)
+
+[node name="Island38" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1584, 1110)
+
+[node name="Island39" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1701, -708)
+
+[node name="Island40" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1419, -1125)
+
+[node name="Island41" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1506, 1263)
+
+[node name="Island42" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1977, 738)
+
+[node name="Island43" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-151, 1465)
+
+[node name="Island44" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1903, 1435)
+
+[node name="Island45" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-2133, 955)
+
+[node name="Island46" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-2182, -113)
+
+[node name="Island47" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-2276, -1174)
+
+[node name="Island48" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-2057, -793)
+
+[node name="Island49" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(-1551, -706)
+
+[node name="Island50" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-1820, -1133)
+
+[node name="Island51" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-2280, 268)
+
+[node name="Island52" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(-929, -155)
+
+[node name="Island53" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(219, -936)
+
+[node name="Island54" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(49, -1269)
+
+[node name="Island55" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(585, -1242)
+
+[node name="Island56" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1922, -1276)
+
+[node name="Island57" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1076, -1216)
+
+[node name="Island58" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(1284, -257)
+
+[node name="Island59" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1746, 1056)
+
+[node name="Island60" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(2127, 1537)
+
+[node name="Island61" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(1168, 1537)
+
+[node name="Island62" parent="Islands" instance=ExtResource("2_8n4ak")]
+position = Vector2(2098, 1205)
+
+[node name="Island63" parent="Islands" instance=ExtResource("1_6tfwd")]
+position = Vector2(385, 921)
+
+[node name="Raft" parent="." instance=ExtResource("4_nliat")]
+position = Vector2(-74, 56)
+
+[node name="Player" parent="Raft" instance=ExtResource("3_qa1ro")]
+z_index = 2
+position = Vector2(1, 3)
+scale = Vector2(1.10041, 1.06075)
+collision_layer = 2
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Raft"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_w8vwr")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-74, 56)
+zoom = Vector2(2.425, 2.425)
+
+[node name="Spawn Point Log" type="Node2D" parent="Camera2D"]
+script = ExtResource("7_lp775")
+
+[node name="Marker2D2" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, -153)
+
+[node name="Marker2D3" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, -53)
+
+[node name="Marker2D4" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, -86)
+
+[node name="Marker2D5" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 7)
+
+[node name="Marker2D6" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, -26)
+
+[node name="Marker2D7" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 74)
+
+[node name="Marker2D8" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 41)
+
+[node name="Marker2D9" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 133)
+
+[node name="Marker2D10" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 100)
+
+[node name="Marker2D11" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-392, -188)
+
+[node name="Marker2D12" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, 167)
+
+[node name="Marker2D13" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-393, 202)
+
+[node name="Marker2D" type="Marker2D" parent="Camera2D/Spawn Point Log"]
+position = Vector2(-394, -120)
+
+[node name="Timer" type="Timer" parent="Camera2D/Spawn Point Log"]
+autostart = true
+
+[node name="Spawn Point Crate" type="Node2D" parent="Camera2D"]
+script = ExtResource("8_xvxqs")
+
+[node name="Marker2D14" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, -103)
+
+[node name="Marker2D15" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, -136)
+
+[node name="Marker2D16" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, -36)
+
+[node name="Marker2D17" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, -69)
+
+[node name="Marker2D18" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 24)
+
+[node name="Marker2D19" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, -9)
+
+[node name="Marker2D20" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 91)
+
+[node name="Marker2D21" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 58)
+
+[node name="Marker2D22" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 150)
+
+[node name="Marker2D23" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 117)
+
+[node name="Marker2D24" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-428, -171)
+
+[node name="Marker2D25" type="Marker2D" parent="Camera2D/Spawn Point Crate"]
+position = Vector2(-430, 184)
+
+[node name="Timer" type="Timer" parent="Camera2D/Spawn Point Crate"]
+
+[node name="Spawn Point Shark" type="Node2D" parent="Camera2D"]
+script = ExtResource("8_422c5")
+
+[node name="Marker2D" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-251, -219)
+
+[node name="Marker2D2" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-199, -219)
+
+[node name="Marker2D3" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-155, -219)
+
+[node name="Marker2D5" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-70, -219)
+
+[node name="Marker2D6" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-21, -219)
+
+[node name="Marker2D7" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(19, -219)
+
+[node name="Marker2D8" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(60, -219)
+
+[node name="Marker2D4" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(-113, -219)
+
+[node name="Marker2D9" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(92, -220)
+
+[node name="Marker2D10" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(136, -220)
+
+[node name="Marker2D11" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(221, -220)
+
+[node name="Marker2D12" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(270, -220)
+
+[node name="Marker2D13" type="Marker2D" parent="Camera2D/Spawn Point Shark"]
+position = Vector2(178, -220)
+
+[node name="Timer" type="Timer" parent="Camera2D/Spawn Point Shark"]
+wait_time = 3.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Escape" type="Button" parent="Camera2D/CanvasLayer"]
+offset_left = 1094.0
+offset_top = 562.0
+offset_right = 1140.0
+offset_bottom = 584.0
+theme_override_font_sizes/font_size = 10
+text = "Quit"
+script = ExtResource("9_nhq0x")
+
+[node name="Arrow" parent="." instance=ExtResource("10_xv5k8")]
+position = Vector2(-163733, -155585)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-2411, -1250, 2236, -1329, 2387, 1745, -2409, 1778, -2417, -1253, -2567, -1562, -2559, 1941, 2840, 1911, 2455, -1646, -2567, -1563)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_i4u2p")
+autoplay = true
+
+[connection signal="timeout" from="Camera2D/Spawn Point Log/Timer" to="Camera2D/Spawn Point Log" method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera2D/Spawn Point Crate/Timer" to="Camera2D/Spawn Point Crate" method="_on_timer_timeout"]
+[connection signal="timeout" from="Camera2D/Spawn Point Shark/Timer" to="Camera2D/Spawn Point Shark" method="_on_timer_timeout"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Escape" to="Raft" method="_on_escape_pressed"]

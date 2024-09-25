@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcbhfr6es8n7"]
+
+[ext_resource type="Texture2D" uid="uid://23yi0n3dublm" path="res://TileMap/d75f2dfe-7975-4db6-8cd8-690a0b8928af.png" id="1_bo2o3"]
+[ext_resource type="Script" path="res://Scenes/game_over.gd" id="2_04x5s"]
+
+[sub_resource type="FontVariation" id="FontVariation_7qwl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0jfw"]
+
+[node name="Death Shark" type="Sprite2D"]
+position = Vector2(616, 343.5)
+scale = Vector2(1.20898, 1.21354)
+texture = ExtResource("1_bo2o3")
+script = ExtResource("2_04x5s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Restart" type="Button" parent="CanvasLayer"]
+offset_left = 766.999
+offset_top = 260.0
+offset_right = 831.999
+offset_bottom = 291.0
+text = "Restart"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+offset_left = 784.0
+offset_top = 313.0
+offset_right = 826.0
+offset_bottom = 344.0
+text = "Quit"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 249.001
+offset_top = 9.00104
+offset_right = 822.001
+offset_bottom = 146.001
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_7qwl7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p0jfw")
+text = "GAME OVER"
+
+[connection signal="pressed" from="CanvasLayer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

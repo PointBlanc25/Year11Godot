@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://blk28u6cpei2a"]
+
+[ext_resource type="Texture2D" uid="uid://23yi0n3dublm" path="res://TileMap/d75f2dfe-7975-4db6-8cd8-690a0b8928af.png" id="1_jowqo"]
+
+[sub_resource type="FontVariation" id="FontVariation_7qwl7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0jfw"]
+
+[node name="Death Shark" type="Sprite2D"]
+position = Vector2(616, 343.5)
+scale = Vector2(1.20898, 1.21354)
+texture = ExtResource("1_jowqo")
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 124.898
+offset_top = -68.8069
+offset_right = 189.898
+offset_bottom = -37.8069
+text = "Restart"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 138.96
+offset_top = -25.133
+offset_right = 180.96
+offset_bottom = 5.86695
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -303.561
+offset_top = -275.639
+offset_right = 269.439
+offset_bottom = -138.639
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_7qwl7")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p0jfw")
+text = "GAME OVER"

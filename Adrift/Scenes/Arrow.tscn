@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://da43wk1b30ijf"]
+
+[ext_resource type="Script" path="res://Scenes/Arrow.gd" id="1_1buqn"]
+[ext_resource type="Texture2D" uid="uid://bnlatfsbrmy7b" path="res://Sprites/sprite_2 (2).png" id="2_xpcxe"]
+[ext_resource type="AudioStream" uid="uid://bgwtien2mgj5b" path="res://Sound Effects/whoosh-transitions-sfx-01-118227.mp3" id="3_wu12p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paoyg"]
+size = Vector2(8.5, 3)
+
+[node name="Arrow" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_1buqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.25, -0.5)
+shape = SubResource("RectangleShape2D_paoyg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.75, 0)
+scale = Vector2(0.59375, 0.5)
+texture = ExtResource("2_xpcxe")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wu12p")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

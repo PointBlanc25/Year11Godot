@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbkfd0jsehayt"]
+
+[ext_resource type="Script" path="res://Scenes/Menu.gd" id="1_x3oos"]
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_x3oos")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Setting" type="Button" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="MarginContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="MarginContainer/Quit" to="." method="_on_quit_pressed"]

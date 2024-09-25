@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg1d378finuha"]
+
+[ext_resource type="Texture2D" uid="uid://biyf8y6mo2tdv" path="res://Sprites/sprite_153.png" id="1_28y16"]
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_h0fa4"]
+[ext_resource type="Texture2D" uid="uid://dn034vk3mr7md" path="res://Sprites/sprite_281.png" id="3_c458y"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_h0fa4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Wood" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Wood"]
+layout_mode = 2
+texture = ExtResource("1_28y16")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/Wood"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 50.0
+
+[node name="Crate" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Crate"]
+layout_mode = 2
+texture = ExtResource("3_c458y")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/Crate"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 75.0

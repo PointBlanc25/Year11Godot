@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cosc5wija0rts"]
+
+[ext_resource type="Texture2D" uid="uid://c4upks3wg3m8d" path="res://Sprites/Crossbow.png" id="1_nqlcp"]
+[ext_resource type="Script" path="res://Scenes/crossbow.gd" id="2_0uex1"]
+[ext_resource type="PackedScene" uid="uid://da43wk1b30ijf" path="res://Scenes/Arrow.tscn" id="2_ip4vv"]
+[ext_resource type="AudioStream" uid="uid://bgwtien2mgj5b" path="res://Sound Effects/whoosh-transitions-sfx-01-118227.mp3" id="3_plgge"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_0uex1")
+Bullet = ExtResource("2_ip4vv")
+
+[node name="Crossbow" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 3.8147e-06)
+rotation = 2.35619
+scale = Vector2(0.0152027, 0.0152027)
+texture = ExtResource("1_nqlcp")
+
+[node name="Marker2D" type="Marker2D" parent="Crossbow"]
+
+[node name="Timer" type="Timer" parent="Crossbow/Marker2D"]
+wait_time = 0.3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(9.20949e-06, 3.8147e-06)
+rotation = 2.35619
+stream = ExtResource("3_plgge")
